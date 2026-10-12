@@ -1,7 +1,8 @@
 # Sistem-Kas-Tiara-Heritage-Barbershop
 
 ## 📋 Skema Database (ERD)
-Berikut adalah rancangan diagram hubungan entitas (Entity Relationship Diagram) untuk sistem pencatatan kas Tiara Heritage Barbershop:
+
+Berikut adalah diagram hubungan entitas (Entity Relationship Diagram) untuk sistem pencatatan kas Tiara Heritage Barbershop:
 
 ```mermaid
 erDiagram
@@ -10,7 +11,24 @@ erDiagram
         varchar nama_pegawai
         varchar jabatan
     }
-    
+```
+
+## Tentang
+
+Aplikasi pencatatan kas masuk dan keluar Tiara Heritage Barbershop. Frontend menggunakan HTML, CSS, dan JavaScript biasa; Supabase menyediakan database PostgreSQL dan REST API.
+
+Fitur utama: dashboard saldo, input transaksi, riwayat dengan pencarian/filter, edit dan hapus transaksi, laporan periode, cetak/PDF, serta ekspor Excel.
+
+## Menjalankan
+
+1. Siapkan proyek Supabase dan masukkan Project URL serta publishable/anon key ke `backend/supabase/config.js`.
+2. Jalankan `database/database.sql` melalui Supabase SQL Editor.
+3. Buka `frontend/index.html` langsung dari folder atau sajikan folder repo melalui web server.
+
+Detail instalasi, alur CRUD, skema, deployment, dan keamanan ada di [Panduan Sistem](docs/panduan-sistem.md). Penjelasan ERD dan relasi tabel tersedia di [Dokumentasi Skema Sistem Kas](docs/skema-sistem-kas.md).
+
+> SQL saat ini mengaktifkan akses `anon` tanpa login untuk demo. Jangan gunakan kebijakan tersebut untuk pencatatan keuangan produksi tanpa menambahkan autentikasi dan membatasi akses.
+>     
     PELANGGAN {
         int id_pelanggan PK
         varchar nama_pelanggan
@@ -36,30 +54,3 @@ erDiagram
     PEGAWAI ||--o{ TRANSAKSI : mencatat
     PELANGGAN ||--o{ TRANSAKSI : terkait
     JENIS_KAS ||--o{ TRANSAKSI : mengelompokkan
----
-
-## 📌 Tentang
-Aplikasi pencatatan kas masuk dan keluar **Tiara Heritage Barbershop**. Frontend dibangun menggunakan **HTML, CSS, dan JavaScript**, sedangkan backend dan database didukung oleh **Supabase (PostgreSQL & REST API)**.
-
-**Fitur Utama:**
-* **Dashboard Saldo:** Menampilkan ringkasan total kas masuk, kas keluar, dan saldo akhir secara *real-time*.
-* **Input Transaksi:** Form pencatatan transaksi kas masuk dan kas keluar dengan validasi data.
-* **Riwayat Transaksi:** Tabel data transaksi lengkap dengan fitur pencarian (*search*), filter berdasarkan periode, serta tombol edit dan hapus data.
-* **Laporan Periode:** Rekapitulasi laporan keuangan berdasarkan rentang waktu tertentu.
-* **Cetak PDF & Ekspor Excel:** Memudahkan pengguna dalam mengunduh atau mencetak laporan keuangan.
-
----
-
-## 🚀 Teknologi yang Digunakan
-* **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
-* **Backend / Database:** Supabase (PostgreSQL, REST API)
-* **Deployment:** GitHub Pages / Web Hosting Platform
-
----
-
-## 💻 Panduan Penggunaan
-1. Akses tautan website aplikasi melalui link deployment GitHub Pages repository ini.
-2. Lakukan login atau navigasikan ke halaman Dashboard untuk melihat ringkasan saldo.
-3. Gunakan menu **Input Transaksi** untuk mencatat kas masuk atau kas keluar yang baru.
-4. Periksa menu **Riwayat** untuk memfilter, mengubah, atau menghapus data transaksi jika diperlukan.
-5. Unduh laporan melalui fitur **Cetak PDF** atau **Ekspor Excel** pada halaman laporan.
