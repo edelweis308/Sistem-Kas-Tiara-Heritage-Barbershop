@@ -54,3 +54,15 @@ Fitur utama: dashboard saldo, input transaksi, riwayat dengan pencarian/filter, 
 Detail instalasi, alur CRUD, skema, deployment, dan keamanan ada di [Panduan Sistem](docs/panduan-sistem.md). Penjelasan ERD dan relasi tabel tersedia di [Dokumentasi Skema Sistem Kas](docs/skema-sistem-kas.md).
 
 > SQL saat ini mengaktifkan akses `anon` tanpa login untuk demo. Jangan gunakan kebijakan tersebut untuk pencatatan keuangan produksi tanpa menambahkan autentikasi dan membatasi akses.
+
+## Identitas Tugas
+
+| Keterangan | Detail |
+|---|---|
+| Nama | Tiara Melany Edelweis |
+| NIM | 12030124140270 |
+| Mata Kuliah | Pengkodean dan Pemrograman |
+| Kelas | D |
+| Dosen Pengampu | Dr. Totok Dewayanto, S.E., M.Si., Akt |
+
+**Disusun untuk memenuhi Tugas Project UTS Pengkodean dan Pemrograman.**
