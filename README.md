@@ -1,4 +1,4 @@
-# Sistem-Kas-Tiara-Heritage-Barbershop
+ # Sistem-Kas-Tiara-Heritage-Barbershop
 
 ## 📋 Skema Database (ERD)
 
@@ -11,24 +11,7 @@ erDiagram
         varchar nama_pegawai
         varchar jabatan
     }
-```
-
-## Tentang
-
-Aplikasi pencatatan kas masuk dan keluar Tiara Heritage Barbershop. Frontend menggunakan HTML, CSS, dan JavaScript biasa; Supabase menyediakan database PostgreSQL dan REST API.
-
-Fitur utama: dashboard saldo, input transaksi, riwayat dengan pencarian/filter, edit dan hapus transaksi, laporan periode, cetak/PDF, serta ekspor Excel.
-
-## Menjalankan
-
-1. Siapkan proyek Supabase dan masukkan Project URL serta publishable/anon key ke `backend/supabase/config.js`.
-2. Jalankan `database/database.sql` melalui Supabase SQL Editor.
-3. Buka `frontend/index.html` langsung dari folder atau sajikan folder repo melalui web server.
-
-Detail instalasi, alur CRUD, skema, deployment, dan keamanan ada di [Panduan Sistem](docs/panduan-sistem.md). Penjelasan ERD dan relasi tabel tersedia di [Dokumentasi Skema Sistem Kas](docs/skema-sistem-kas.md).
-
-> SQL saat ini mengaktifkan akses `anon` tanpa login untuk demo. Jangan gunakan kebijakan tersebut untuk pencatatan keuangan produksi tanpa menambahkan autentikasi dan membatasi akses.
->     
+    
     PELANGGAN {
         int id_pelanggan PK
         varchar nama_pelanggan
@@ -54,3 +37,20 @@ Detail instalasi, alur CRUD, skema, deployment, dan keamanan ada di [Panduan Sis
     PEGAWAI ||--o{ TRANSAKSI : mencatat
     PELANGGAN ||--o{ TRANSAKSI : terkait
     JENIS_KAS ||--o{ TRANSAKSI : mengelompokkan
+```
+
+## Tentang
+
+Aplikasi pencatatan kas masuk dan keluar Tiara Heritage Barbershop. Frontend menggunakan HTML, CSS, dan JavaScript biasa; Supabase menyediakan database PostgreSQL dan REST API.
+
+Fitur utama: dashboard saldo, input transaksi, riwayat dengan pencarian/filter, edit dan hapus transaksi, laporan periode, cetak/PDF, serta ekspor Excel.
+
+## Menjalankan
+
+1. Siapkan proyek Supabase dan masukkan Project URL serta publishable/anon key ke `backend/supabase/config.js`.
+2. Jalankan `database/database.sql` melalui Supabase SQL Editor.
+3. Buka `frontend/index.html` langsung dari folder atau sajikan folder repo melalui web server.
+
+Detail instalasi, alur CRUD, skema, deployment, dan keamanan ada di [Panduan Sistem](docs/panduan-sistem.md). Penjelasan ERD dan relasi tabel tersedia di [Dokumentasi Skema Sistem Kas](docs/skema-sistem-kas.md).
+
+> SQL saat ini mengaktifkan akses `anon` tanpa login untuk demo. Jangan gunakan kebijakan tersebut untuk pencatatan keuangan produksi tanpa menambahkan autentikasi dan membatasi akses.
