@@ -55,6 +55,8 @@ Detail instalasi, alur CRUD, skema, deployment, dan keamanan ada di [Panduan Sis
 
 > SQL saat ini mengaktifkan akses `anon` tanpa login untuk demo. Jangan gunakan kebijakan tersebut untuk pencatatan keuangan produksi tanpa menambahkan autentikasi dan membatasi akses.
 
+*Demo aplikasi:** (https://edelweis308.github.io/Sistem-Kas-Tiara-Heritage-Barbershop/)
+
 ## Identitas Tugas
 
 | Keterangan | Detail |
